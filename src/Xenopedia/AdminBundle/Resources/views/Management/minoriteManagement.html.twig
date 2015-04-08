@@ -1,0 +1,23 @@
+{% extends "XenopediaAdminBundle:Display:layout.html.twig" %}
+
+{%block article %}
+
+<h3>Liste minorités</h3>
+<ul>
+{% for minorite in tab_minorite %}
+	<li>{{ render(controller("XenopediaAdminBundle:Management:editMinorite", { 'idMinorite' : minorite.id })) }}</li>
+{% else %}
+	<li>Aucune minorité trouvée dans la base de donnée</li>
+{% endfor %}
+</ul>
+
+<h3>Ajouter des minorités</h3>
+ 
+<div class="well">
+  <form method="post"  action="{{path('xenopedia_admin_minorite_manager')}}"{{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>
+
+{%endblock%}

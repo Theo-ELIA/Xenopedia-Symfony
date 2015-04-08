@@ -1,0 +1,17 @@
+<div id="connexion">
+	
+	<form method="post" action="{{ path('fos_user_security_check') }}">
+			<label for="username">Login :</label>
+			<input type="text" id="username" name="_username" value="{{ last_username }}" />
+ 
+			<label for="password">Mot de passe :</label>
+			<input type="password" id="password" name="_password" />
+			<input type="submit" value="Connexion" />
+			 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+			<label for="remember_me">Se souvenir de moi ?</label>
+	</form>
+	<a href=#>S'inscrire</a>
+	 {% if error %}
+		<p class="alert alert-error">{{error.getMessage}}</p>
+	{% endif %}
+</div>

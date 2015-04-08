@@ -1,0 +1,15 @@
+{% extends "XenopediaAdminBundle:Display:layout.html.twig" %}
+
+{%block article %}
+
+<h3>Liste Utilisateurs</h3>
+<ul>
+{% for user in tab_user %}
+	<li>{{ render(controller("XenopediaAdminBundle:Management:editUser", { 'username' : user.username })) }}</li>
+{% else %}
+	<li>Aucun user trouvée dans la base de donnée</li>
+{% endfor %}
+</ul>
+
+
+{%endblock%}

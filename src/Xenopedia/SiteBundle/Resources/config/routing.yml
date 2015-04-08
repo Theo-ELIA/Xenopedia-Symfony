@@ -1,0 +1,38 @@
+crud:
+    resource: "@XenopediaSiteBundle/Controller/ClicheController.php"
+    type: annotation
+member_zone:
+    resource: "@XenopediaUserBundle/Resources/config/routing.yml"
+    prefix: /member/
+xenopedia_site_homepage:
+    pattern:  /
+    defaults: { _controller: XenopediaSiteBundle:Default:index }
+xenopedia_quote:
+    pattern: /quote
+    defaults: { _controller: XenopediaSiteBundle:Quote:index}
+    
+xenopedia_voir_topCliche:
+    path: /top/{nbCliche}
+    defaults: { _controller: XenopediaSiteBundle:DisplayCliche:top, nbCliche : 50}
+    requirements: 
+        nbCliche: \d+
+  
+
+#ROUTES D'AFFICHAGE DE CLICHES
+        
+xenopedia_voir_cliche_membre:
+    path: /voirCliches/{userName}
+    defaults: {_controller:XenopediaSiteBundle:DisplayCliche:indexMembre }
+    
+xenopedia_voir_minorite_cliche:
+    path: /voirCliches/minorite/{minorite}
+    defaults: {_controller:XenopediaSiteBundle:DisplayCliche:indexMinoriteCliche}
+    
+xenopedia_voir_minorite:
+    path: /voirCliches/minorite/
+    defaults: {_controller:XenopediaSiteBundle:DisplayCliche:indexMinorite}
+
+xenopedia_about:
+    path: /about
+    defaults: {_controller:XenopediaSiteBundle:FixedContent:about}
+    

@@ -1,0 +1,7 @@
+parameters:
+#    xenopedia_site.example.class: Xenopedia\SiteBundle\Example
+
+services:
+#    xenopedia_site.example:
+#        class: %xenopedia_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

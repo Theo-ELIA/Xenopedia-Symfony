@@ -1,0 +1,31 @@
+{# src/Xenopedia/SiteBundle/Resources/views/layout.html.twig #}
+ 
+{% extends "XenopediaSiteBundle:Site:layout.html.twig" %}
+
+{%block article%}
+<h1>{{ titre }}</h1>
+	{% for cliche in tab_cliche %}
+	<div class="cliche_overview">
+				{% if cliche.minorite.urlImage != '' %}
+				{% set urlImage =  cliche.minorite.urlImage %}
+				{% else %}
+				{% set urlImage = "http://www.astrosurf.com/luxorion/Images/terre-europe.jpg" %}
+				{% endif %}
+                <img src="{{ urlImage }}" class="img_overview"/>
+                <p>Minorité incriminée : <a href="{{path("xenopedia_voir_minorite_cliche",{'minorite' : cliche.minorite.nom} )}}" title="Voir tous les clichés sur cette minorité">{{cliche.minorite.nom}}</a></p>
+                <p>Auteur : <a href="{{path('xenopedia_voir_cliche_membre',{'userName' : cliche.auteur.username})}}" title="Voir tous les clichés de cet auteur">{{cliche.auteur.username}}</a></p>
+                <br/>
+                <p class="cliche_content">{{cliche.contenu}}</p>
+                
+                <br/>
+                <p>Upvotes : +{{cliche.vote}} | <a href="{{path('xenopedia_voter',{'idCliche' : cliche.id})}}" title="Voter pour ce cliché">+1</a></p>
+				{% if  is_granted('ROLE_ADMIN') %}
+				<p><a href="#">Supprimer</a></p>
+				{% endif %}
+                
+               </div>
+	{%else%}
+	<p>Il n'y a pas de cliché trouvé pour cette requette</p>
+	{% endfor %}
+	
+{%endblock%}

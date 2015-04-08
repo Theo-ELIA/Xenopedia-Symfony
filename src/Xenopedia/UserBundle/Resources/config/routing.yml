@@ -1,0 +1,9 @@
+add_cliche:
+    pattern: addCliche
+    defaults: { _controller: XenopediaUserBundle:Submission:ajouterCliche }
+    
+xenopedia_voter:
+    path: /voter/{idCliche}/
+    defaults: {_controller: XenopediaSiteBundle:Cliche:voterCliche, url: 'xenopedia_site_homepage'}
+    requirements:
+        idCliche: \d+

@@ -1,0 +1,50 @@
+{# app/Resources/views/layout.html.twig #}
+ 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+		<title>{% block title %}{% endblock %}</title>
+ 
+		{% block stylesheets %}
+		<link rel="stylesheet" href="{{ asset('css/designXenopedia.css') }}" type="text/css" />
+		{% endblock %}
+	</head>
+ 
+	<body>
+		<div id="bordure">
+			<div id="bloc_page">
+				{%block topbar %}{%endblock%}
+				<header> 
+				<p id="citation">Xenopedia...</p>
+				</header>
+				<nav>
+					{%block menu %}{%endblock%}
+				</nav>
+			
+				<section id="bloc-corps">
+					{% block blocCorps %}{% endblock %}
+				</section>
+			
+				<footer>
+					<p>Copyright de l'amour</p>
+				</footer>
+			
+			
+		
+			</div>
+		</div>
+		<script>
+			{% if app.session.flashbag.get('noticeAlertJS') is defined %}
+				var noticeAlert = new Array()
+				{% for flashMessage in app.session.flashbag.get('noticeAlertJS') %}
+					noticeAlert.push("{{ flashMessage| raw }}");
+				{% endfor %}
+			{% endif %}
+			var pathToQuote = "{{ path("xenopedia_quote") }}";
+		</script>
+		<script src="{{ asset('script/designScript.js') }}">
+		</script>
+	</body>
+</html>

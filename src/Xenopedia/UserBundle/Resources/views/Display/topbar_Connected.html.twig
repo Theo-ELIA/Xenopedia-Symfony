@@ -1,0 +1,14 @@
+	<div id="espace_membre">
+		<p id="avatar">
+		<img src="{{ gravatar(app.user.urlGravatar) }}"/> {{app.user.username}}</p>
+			<ul>
+				<li><a href="{{ path('fos_user_profile_show')}}">Mon profil</a></li>
+				<li><a href="{{path('xenopedia_voir_cliche_membre',{'userName' : app.user.username})}}">Mes soumissions de clichés</a></li>
+				<li><a href="{{path('add_cliche')}}">Ajouter un cliché</a></li>
+				{% if  is_granted('ROLE_ADMIN') %}
+				<li><a href="{{path('xenopedia_admin_homepage')}}">Panneau d'administration</a></li>
+				{% endif %}
+				<li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+				
+			</ul>
+	</div>

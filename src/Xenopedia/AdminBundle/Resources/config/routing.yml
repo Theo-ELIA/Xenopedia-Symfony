@@ -1,0 +1,33 @@
+xenopedia_admin_homepage:
+    pattern:  /
+    defaults: { _controller: XenopediaAdminBundle:Default:index }
+    
+xenopedia_admin_user_manager:
+    pattern: /user_manager
+    defaults: {_controller:XenopediaAdminBundle:Management:indexUser }
+xenopedia_admin_user_manager_edit:
+    pattern: /edit_user_manager/{userName}
+    defaults: {_controller:XenopediaAdminBundle:Mangement:editUser }
+    
+    
+xenopedia_admin_minorite_manager:
+    pattern: /minorite_manager
+    defaults: { _controller: XenopediaAdminBundle:Management:indexMinorite }
+xenopedia_admin_minorite_manager_edit:
+    pattern: /edit_minorite_manager/{idMinorite}
+    defaults: {_controller: XenopediaAdminBundle:Management:editMinorite}
+    requirements:
+        idMinorite: \d+
+        
+xenopedia_admin_categorie_minorite_manager:
+    pattern: /categorie_minorite_manager
+    defaults: {_controller: XenopediaAdminBundle:Management:indexCategorieMinorite}
+xenopedia_admin_categorie_minorite_manager_edit:
+    pattern: /edit_categorie_minorite/{idCategorieMinorite}
+    defaults: {_controller: XenopediaAdminBundle:Management:editCategorieMinorite}
+    requirements:
+        idCategorieMinorite: \d+
+        
+xenopedia_admin_grant_admin:
+    pattern: /grant_admin/{username}
+    defaults: {_controller: XenopediaAdminBundle:Management:grantAdminRight}

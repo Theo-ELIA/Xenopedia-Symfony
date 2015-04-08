@@ -1,0 +1,15 @@
+{% extends "XenopediaSiteBundle:Site:layout.html.twig" %}
+
+{%block article%}
+
+<h1>Liste des minorités</h1>
+
+<ul>
+	{% for cliche in tab_minorite %}
+	<li><a href="{{path("xenopedia_voir_minorite_cliche",{'minorite' : cliche.nom} )}}">{{cliche.nom}}</a></li>
+	{% else %}
+	<li>Aucune minorité trouvée dans la base de donnée</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

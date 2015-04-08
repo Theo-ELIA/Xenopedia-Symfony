@@ -1,0 +1,28 @@
+{# src/Xenopedia/SiteBundle/Resources/views/layout.html.twig #}
+ 
+{% extends "::layout.html.twig" %}
+ 
+{% block title %}Xenopedia : Admin{% endblock %}
+ 
+{% block topbar %}
+<div id="topbar">
+
+{% if not is_granted('ROLE_USER') %}
+	{% include "XenopediaUserBundle:Display:topbar_NotConnected.html.twig" %}
+{% else %}
+	{% include "XenopediaUserBundle:Display:topbar_Connected.html.twig" %}
+{% endif %}
+
+</div>
+{%endblock%}
+{% block menu %}
+	{% include "XenopediaAdminBundle:Display:menu_nav.html.twig" %}
+{% endblock %}
+{% block blocCorps %}
+	<article id="corps">
+		{% block article %}{%endblock%}
+	</article>
+	<aside id="menu_lateral">
+		{% include "XenopediaAdminBundle:Display:menu_lateral.html.twig" %}	
+	</aside>
+{% endblock %}

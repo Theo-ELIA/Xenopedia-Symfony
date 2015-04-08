@@ -1,0 +1,377 @@
+div, nav, aside, article
+{
+	margin : 0;
+}
+
+body
+{
+	background: url(design/noise.png), #669acc;
+	margin: auto;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	width : 80%;
+	min-width : 820px;
+	height : 100%;
+	font-size : 1em;
+}
+body a
+{
+	text-decoration : none;
+}
+#corps a
+{
+	font-size : 0.8em;
+}
+p,ul
+{
+	margin : 0; 
+	font-size : 1em;
+}
+
+#topbar {
+	height: 29px;
+	min-height: 29px;
+	width: 80%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 1px #000;
+	color: white;
+	font-family: sans-serif;
+	font-size: 1em;
+	background: #215485;
+	background: -moz-linear-gradient(top,  #215485 0%, #082549 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#215485), color-stop(100%,#082549)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #215485 0%,#082549 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #215485 0%,#082549 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #215485 0%,#082549 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #215485 0%,#082549 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215485', endColorstr='#082549',GradientType=0 ); /* IE6-9 */
+	padding-left : 10%;
+	padding-right : 10%;
+
+	border-bottom: 5px solid #215485;
+
+}
+
+#topbar a
+{
+	color : white;
+	text-decoration : underline;
+}
+
+/* Définition du style de la boite de connexion */
+#connexion
+{
+	display : inline-block;
+	width : 100%;
+
+}
+#connexion form, #connexion a
+{
+	display : inline-block;
+}
+#form_connexion label
+{
+	margin : 6px;
+}
+#form_connexion input
+{
+	width: 150px;
+}
+
+/* FIN DE LA DEFINITION DU STYLE DE LA BOITE DE CONNEXION */
+#espace_membre
+{
+	font-size : 0.8em;
+}
+#espace_membre #avatar
+{
+	top : 10px;
+
+}
+#espace_membre p
+{
+	display : inline-block;
+}
+#espace_membre #avatar img
+{
+	height : 26px;
+	dislay : inline-block;
+	vertical-align:middle
+}
+#espace_membre ul
+{
+	list-style-type : none;
+	text-align : center;
+	display : inline-block;
+	margin: 0;
+	padding: 0;
+}
+#espace_membre li
+{
+		display: inline;
+		margin: 0;
+}
+#espace_membre li a
+{
+	display: inline-block;
+	color : white;
+	text-decoration : none;
+	padding-right: 15px; 
+	padding-left: 15px;
+	padding-top: 6px;
+	height: 23px;
+	margin: 0;
+	margin-right: -4px;
+	
+	border-right : 1px #215485 solid;
+	
+	text-shadow: 0 0 1px #000;
+		
+	/* transition */
+	-moz-transition: background 0.35s ease;
+	-webkit-transition: background 0.35s ease;
+	-o-transition: background 0.35s ease;
+	transition: background 0.35s ease;
+
+}
+#espace_membre li a:hover {
+	background: #215485	;
+}
+/* DEFINITION DU STYLE DE LA BOITE DE MEMBRE */
+
+
+#bordure
+{
+	border-radius : 5px;
+	background: url(design/px_dot_white.png);
+	padding : 10px;
+	min-width : 820px;
+	
+}
+
+
+#bloc_page
+{	
+	border-radius : 5px;
+	width : 100%;
+	height : 100%;
+
+}
+header
+{
+	border-radius: 5px 5px 0 0;
+	background-color :  #215485;
+	color : white;
+	height : 225px;
+
+}
+
+#citation
+{
+	padding-top : 200px;
+	font-family: 'Playfair Display SC', serif;
+	font-size : 1.1em;
+	letter-spacing : 3px;
+	padding-left:10px;
+}
+nav
+{
+	background-color : #61606A;
+	text-align : left;
+	background: url(design/noise.png),url(design/grad_nav.png);
+	height : 40px;
+	
+	box-shadow: 0 1px 8px #81add2;
+	border-top: 2px solid #81add2;
+	
+	border-bottom: 6px solid #81add2;
+}
+nav ul 
+{
+	list-style-type: none;
+	padding-top: 6px;
+	font-size : 0.9em;
+}
+
+nav ul li {
+	display: inline-block;
+	border-radius: 3px;
+	margin-right: 15px;
+	/* transition */
+	-moz-transition: all 0.35s ease;
+	-webkit-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+nav ul li a{
+	font-family: 'Merriweather Sans', sans-serif;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: small-caps;
+	text-shadow: 0 0 1px #383738;
+	
+	display: inline-block;
+    border-radius: 3px;
+    padding:5px;
+    min-width: 100px;
+    text-align: center;
+    
+	background: url(design/px_dot_white.png);
+	
+	/* transition */
+	-moz-transition: all 0.35s ease;
+	-webkit-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+nav li:hover, nav ul li a:hover
+{
+	background: url(design/noise.png), #669acc;
+	margin-right: 40px;
+	padding-left: 10px;
+	padding-right:10px;
+	text-shadow: 0 0 1px #383738;	
+}
+
+
+#menu_lateral
+{
+	
+	padding-left : 10px;
+	background : url(design/px_grad_left.png);
+	width : 210px;
+}
+
+#corps
+{
+	height : 100%;
+	padding-left : 1%;
+	text-align : justify;
+	padding-bottom : 5em;
+	padding-right: 2%;
+	
+	font-family: sans-serif;
+	font-size: 13px;
+}
+#corps, #menu_lateral
+{
+	display : table-cell;
+	
+	vertical-align : top;
+	height : 100%;
+
+}
+
+aside h2 {
+	font-size: 16px;
+}
+aside p {
+	font-size: 13px;
+}
+
+#bloc-corps
+{
+	background: url(design/noise.png), #eee;
+	width : 100%;
+	height : 100%;
+	font-family: sans-serif;
+	color: #383738;
+}
+footer
+{
+	text-align : center;
+	border-radius: 0 0 5px 5px;
+	background: url(design/px_grad_left.png) right repeat-y, url(design/noise.png), #eee;
+	
+	font-family: serif;
+	color: #383738;
+	font-size: 14px;
+	letter-spacing: 3px;
+}
+
+/* AFFICHAGE CLICHE */
+
+.cliche_overview {
+ border-radius: 3px;
+ box-shadow: 0 0 2px grey;
+ background: url(design/noise.png), #D6E7F7;
+ min-height: 100px;
+ padding: 10px;
+}
+.cliche_overview a {
+ text-decoration: none;
+}
+.cliche_overview .img_overview {
+ height: 100px;
+ width: 100px;
+ float: left;
+ margin-right: 10px;
+}
+.cliche_overview .cliche_content {
+ text-align: justify;
+ font-style: italic;
+ font-weight: bold;
+}
+
+/*
+
+
+NNNNNNNNNNNNNNNNNNNNNNNNNNNM77777IIIIIIII???I??????INNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNM77I7I7IIIIIIIIII????????????8NNNNNNNNNNNNNNNNNNNNNNNND
+NNNNNNNNNNNNNNNNNNNNNNNNO77III77I7I7IIIIIII??????+?????INNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNN77IIIIIII7IIIII??I???++????????????NNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNZIIIIIII?III7III?I??????++???++++???IDNNNNNNNNNNNNNNNNNNNN
+NNNNNNDDDNNNNNNNNNNNN87IIII?III?II?II???????++++++?++++++??INNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNM7III7IIIIIIIII?I?I????++++++???++++++?I8NNNNNNNNNNNNNNNNDDD
+NNNNNNNNNNNNNNNNNNNNO77IIIIIIIIIIIII??I???+++?+++???+++?++??INNNNNNNNNNNNNDNNDDD
+NNNNNNNNDNNNNNNNNNNN$77IIII77IIIII?I????+?+++I+++???+++++++?IDNNNNNNNNNNDDDDNDDD
+NNNNNDDNNNNNNNNNNNND$I$77I?77IIIII7I7II7??8D8DDNDD?+++=+++++?7NNNNNNNNNNDNDNDDND
+NNNNNNNNNNNNNNNNN$I77M8$ZONNNND8NNDD8NNDNZZII7ODNND++?+++?????NNNNNNNNNNDDDDDNDD
+NNNDNNNNNNNNNNNNIZZ$?III77$ZZZO8NDD88MNND$OO7II7$ON8?+??ODNNDDNDNNNNDDDDDDDDDDDD
+NNNNNDNNNNNNNNNN?II$III$777$Z$$$$$8O88NNNMNN8ZO7$ZD8N7IDN88DDDDNNDDDDDDDDDDDDDDD
+NNNNNNNNNNNNNNNN+7?I7$777I77777$$$ZODNNNO?7778OZZ$Z8NDMN$Z7$7NDNNDDDDDDDDDDDDDDD
+NNNNDDNNNNNNNNNN+7I7D7I7I7777I77I77ZZZ7N$II77$$7I7DDIONNDOIOZ8MMDNNDDDDDDDDDDDDD
+NNNNNNNNNNNNNNNN?II7Z$I7II$77777IIII7$ODOI????+??88??+I?+7I$D8NMDNNDDDDDDDDDDDDD
+NNNNNNNNNNNNNNNNM7?7O7I7IIIIIIIIIII????Z8NM7???ON$?+++?O7IIIIZDNN?DDNDNNNDDNDDDD
+NNNNNNNNNNNNNNNNNI7??NI7III7III??I??I??+=+DNNN8ZII?+++?N?7$7I8D8DDDNDDNDDDDDDDDD
+NNNNNNNDNNNNNNNNNM?+?I7IIIIIIII?????I?I+??II$O$I??+++++IMD+++DNDDDDDDDDDDDDDDDDD
+NNNNNNNNNNNNNNNNNM????7I7I77I?I?IIIIII7I77Z$I+$77I??++???DDNDNNDDDDDDDDDDDDDDDDD
+NNNNNNNNNNNNNNNNNM7??777II7IIIIIIIIII77$ZO$I?77$OO877II77????NNNDDDDDDDDNNNNNNNN
+NNNNNNNNNNNNNNNNMM7$7$$7I$77III$I?II77$DZI7II=+?$8DD8877$I??IDNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNMMM$$7$777$$7$7?I7II?7$$$MM8$I???IZDDDO7I7IIIIDNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNMMM7$7$777777$III?II7II7III$M+ZIOZZZZ$7777777DNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNMMM87$7$7$7$7Z77IIIIIIII7I??+?+?7$7?7ZMN7??II7NNNNNNNDDDDDDNDDDNNN
+NNNNNNNNNNNNNNDNN7777$77777$$$7I?I7III7??++?++++?II77??++I7DNNDDNDDDDDDDDDDDDDDD
+NNNNNNNNNNNNO8MM$777777I$77$77I7I7777II??++++++??IIII??+?I7DNDDDDDDDDDDDDDDDDDDD
+NNNNNNNNNNNDZOMM7N7I777I77777$77I77?7I????+=+??I??III??+IINNDDDDNDDDDDDDDDDDDDDD
+NNNNNNNNNNN$$ZM8+M7III7I7777$$7I77I7I+??+????+++??I7?+777NNNNDDDDDDDDDDDDDDDDDDD
+NNNNNNNNNNZ$$ZODI+NII7777I777$$$$7$77I7?I+++II?I?II7?II8NNNNNNNNDNNDDDDDDDDNDDDD
+NNNNNNNNN$$$$ZZZO?=DIIIIII777$$$$7I$7$$7?III?????I7?IINNNNNNNNNNNNNDDDDDDDDDDDDD
+NNNNNNNN8$$ZZ$ZZ8O?=I?III777777777IIIIIZ$$ZIZZ7II$$78NNNNNNNNNNNNNNNDDDDDDDDDDDD
+NNNNN$$$O$$OOZZZZ8Z?=+$III7777777777I7II7ZZZZ$ZZOZDNNNNNNNNNDNDDNNDNDDDDDDDDDDDD
+MN$7$O8OODZ$OZZZZOZZI+=I$77I77777$$777$$7$$7$$$ZONDDDNNNNNNNNNNDDNNNDDDDDDDDDDDD
+7$ZOOD8Z8DZ$$$Z$ZZZZOI+=+$Z$7777$$$$ZZ$$77$II7$ZMD88D88OONDDNNDNNNNNDDDDDDDDDDDD
+ZOOO8O8DD8M$$Z$$ZZOOZO7+==?7Z$777777$777777ZI$8ONOZ8O88888OO8DNNDNNNDDDDDDDDDDDD
+OOZOOOO8DDNMZZOZZZZOZ88$?+=+77OOZ$OZ$77$7I$$OMMIDZ$ZO888O888O8OOODDDDDDDDDDDDDDD
+OZZZZZZOODDN$$O$ZZZZZZOD$?+=~+777O8O8OOOO888DM$?DZ7ZOO8OOOOO88OOOOOOODNNDDDDDDDD
+OOOZZZOOZO8DNOZOOZZZZZOON$?+===+7ZZZNNNNNDDO8M=8ZZZ$$ZO8OOOOOOOOOOO8OOOO8DDDDDDD
+OOOZOZZOOOOON$ZZZOZOZO8ZZNZ?+==~=?ZZZO$7777ZO=IOOOZZ$$ZOOZZOOOZOOOOOZZZOOOODDDDD
+OOOOOOO$$OZZNND8ZZ$ZZOOOOO$8?+==~7+$77IIII+IO?8OOZZOZ$$ZOZZZZOOZOOOOZZZZZZOZZDDD
+OOO8OOOOZ$Z$ZODNMMMNO$Z8OZZZ8I+=OZ??II+?77$8$$OOOZZOZZDMDZ$ZZOOOZOOOZZZZZZZOZZZN
+OOOOO8OO$Z$Z$Z$ZO8ONNZZOOOZZ$8?I7=+++IZ$7ZZ7?IZ$OOOZO$ZOOZZZOZZZOOOOZZ$ZOZZZ$ZZ$
+O88OO8OOOZ$ZZ$$$$ZZOZZ$ZOZZZZ$D$DDI?+?=+=II+++ZZZZOOZZZZZZ$ZZZOZZOOOOZ$ZZZZZZ$Z$
+OOO8O8OOOOZZZZZ$$$ZZ$ZZO$ZZZ$$7+ZDO?=N=+??Z?==8$Z$ZOZOZZO$Z$ZZZZZOOOZZZZZZZZZ$$$
+8OOOOOOOOOO$ZZZZ$OOZZ$OZZZ$Z$Z$7++DZ7M+?+I8+=+N$$$$$OZOZZZ$$ZOZZZOOOZZ$$ZZZZ$$$$
+8D8OOOZOO8OZZZZZO8$$$$7$$$$$$$$77+=DDD++?=O8?+N$7$$ZOZZZOZ$$ZZZZZOOOZZ$$$ZZZZ$$$
+888O8OOOOOOOOZZZ8ND$$$$$$7777$$77I?=OD+?~~=7?+8$$$$ZZZ$ZO$ZZZZZZZZOZZZZ$ZZZZZ$$$
+O88888OOOOOZOZZOZONDD$$7$$$7777$77III??~=~===OD$77$$ZZZOZZ$ZZZ$ZZZZZZZZ7$ZZ$$$$$
+O8O888OOOOZOZZZZZZ$8ND8777$$777I7I7?I=~:~~====Z$77$$ZZZOZ$Z$ZZZZZZZZZ$ZZ$$Z$Z$$$
+ZO8OO8OOZOZZZZZZ$$ZZOD887I7$777777I7+~:~~~====777$$$ZOZZZ$$Z$ZZZZZZZZZZ$$$$ZZZ$$
+$ZOOO88OOZOZZZZ$$$$$ZZ88887II77777777==~~=====I7777ZZZOOOZ$$$$ZZ$ZZZZZ$$$$$ZZ$$$
+*/

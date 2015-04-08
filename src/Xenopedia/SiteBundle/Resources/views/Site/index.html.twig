@@ -1,0 +1,25 @@
+{# src/Xenopedia/SiteBundle/Resources/views/layout.html.twig #}
+ 
+{% extends "::layout.html.twig" %}
+ 
+{% block title %}Xenopedia : L'Encyclopédie des clichés, stéréotypes et autres préjugés{% endblock %}
+ 
+{% block topbar %}
+	{% if MEMBER_AUTHENTICATED %}
+		{% include "XenopediaSiteBundle:Site:topbar_NotConnected.html.twig" %}
+	{% else %}
+		{% include "XenopediaSiteBundle:Site:topbar_NotConnected.html.twig" %}
+	{ % endif % }
+{ % endblock % }
+
+{# {% block menu %} #}
+	{ % include "XenopediaSiteBundle:Site:menu_nav" % }
+{% endblock %}
+{% block bloc-corps %}
+	<article id="corps">
+		{% block corps %}{%endblock%}
+	</article>
+	<aside id="menu_lateral">
+		{% include "XenopediaSiteBundle:menu_lateral.html.twig" %}	
+	</aside>
+{% endblock%}

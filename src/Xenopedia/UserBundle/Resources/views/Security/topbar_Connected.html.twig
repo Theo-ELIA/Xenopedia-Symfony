@@ -1,0 +1,9 @@
+	<div id="espace_membre">
+		<p id="avatar"><img src="{{ asset('avatar/avatar.jpg') }}"/> {{app.user.username}}</p>
+			<ul>
+				<li><a href="#">Mon profil</a></li>
+				<li><a href="#">Mes votes</a></li>
+				<li><a href="#">Mes soumissions de clichés</a></li>
+				<li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+			</ul>
+	</div>

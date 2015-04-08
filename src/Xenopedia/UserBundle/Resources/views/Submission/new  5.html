@@ -1,0 +1,16 @@
+{# src/Xenopedia/SiteBundle/Resources/views/layout.html.twig #}
+ 
+{% extends "XenopediaSiteBundle:Site:layout.html.twig" %}
+
+{%block article%}
+
+<h3>Soumettre un cliché</h3>
+ 
+<div class="well">
+  <form method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>
+
+{% endblock%}
